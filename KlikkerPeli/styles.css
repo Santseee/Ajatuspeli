@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(135deg, #1b1b2f, #162447);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+
+/* Pelin otsikko */
+body::before {
+    content: "AJATTELE!";
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+
+/* Ajatusten määrä */
+#ajatusnäyttö {
+    background-color: #25254a;
+
+    padding: 20px 40px;
+
+    border-radius: 15px;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+
+    min-width: 350px;
+    text-align: center;
+}
+
+
+/* Kaikki napit */
+button {
+    border: none;
+
+    padding: 15px 25px;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    color: white;
+}
+
+
+#ajatusnappi {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#ajatusnappi img {
+    width: 200px;
+    display: block;
+}
+
+#ajatusnappi:hover img {
+    transform: scale(1.05);
+}
+
+#ajatusnappi:active img {
+    transform: scale(0.95);
+}
+
+
+/* Suur-ajattelija */
+#parempiajatus {
+    background-color: #e67e22;
+
+    min-width: 300px;
+}
+
+#parempiajatus:hover {
+    background-color: #f39c12;
+
+    transform: translateY(-2px);
+}
+
+
+/* Automaatti-ajattelija */
+#automaattiajatus {
+    background-color: #27ae60;
+
+    min-width: 300px;
+}
+
+#automaattiajatus:hover {
+    background-color: #2ecc71;
+
+    transform: translateY(-2px);
+}
+
+
+/* Klikatessa kaikki napit vähän painuvat */
+button:active {
+    transform: scale(0.97);
+}
+
+
+/* Mobiililaitteille */
+@media (max-width: 600px) {
+
+    #ajatusnäyttö {
+        min-width: 80%;
+        font-size: 22px;
+    }
+
+    #ajatusnappi {
+        font-size: 20px;
+    }
+
+    button {
+        width: 80%;
+    }
+}
